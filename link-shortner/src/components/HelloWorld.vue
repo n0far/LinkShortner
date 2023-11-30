@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <p>Enter your url</p>
-    <input v-model="longUrl" placeholder="Enter URL" /> 
-    <button @click="shortenUrl">shorten</button>
-    <p v-if="shortenedUrl"> Shortened URL : {{ shortenedUrl }}</p>
+    <input v-model="longUrl" placeholder="Enter URL" @input="shortenUrl"/> 
+     <!-- <button @click="shortenUrl">shorten</button> -->
+    <!-- <button v-if="shortenedUrl" @click="copyToClipboard" > copy</button> -->
     
   </div>
 </template>
@@ -18,6 +18,14 @@ export default {
     };
   },
   methods:{
+    copyToClipboard(){
+      const tempInput = document.createElement('input');
+      tempInput.value=this.shortenedUrl;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+    },
     async shortenUrl(){
       try{
         const accessToken = '96dfd555f8dd4b00a4da5ffa8547f2f90d9e98f1';
@@ -28,6 +36,7 @@ export default {
         console.error('Error shortening URL:', error);
         this.error = 'An error occurred while shortening the URL.';
       }
+      this.copyToClipboard();
     },
   },
   name: 'HelloWorld',
