@@ -2,8 +2,10 @@
   <div class="hello">
     <p>Enter your url</p>
     <input v-model="longUrl" placeholder="Enter URL" @input="shortenUrl"/> 
-     <!-- <button @click="shortenUrl">shorten</button> -->
-    <!-- <button v-if="shortenedUrl" @click="copyToClipboard" > copy</button> -->
+    
+
+    <p v-if="shortenedUrl">The url was shortened and copied to your clipboard!</p>
+     
     
   </div>
 </template>
@@ -37,6 +39,9 @@ export default {
         this.error = 'An error occurred while shortening the URL.';
       }
       this.copyToClipboard();
+      // display a message to the user saying that the URL has been copied to the clipboard
+      
+       
     },
   },
   name: 'HelloWorld',
