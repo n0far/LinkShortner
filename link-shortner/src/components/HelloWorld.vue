@@ -39,7 +39,7 @@ export default {
         this.error = 'An error occurred while shortening the URL.';
       }
       this.copyToClipboard();
-      // display a message to the user saying that the URL has been copied to the clipboard
+      
       
        
     },
@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;
