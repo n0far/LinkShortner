@@ -8,8 +8,15 @@ The Link-Shortener Chrome extension allows you to shorten URLs without leaving y
 
 ### Installation
 
-1. Download the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/kmjinpeoldkfggiieamdhgpidhmlkpag).
-2. Click on "Add to Chrome" to install the extension.
+1. Clone the repository: `git clone https://github.com/n0far/link-shortener.git`
+2. Navigate into the project directory: `cd link-shortener`
+3. The `dist` folder contains the built extension. 
+
+To add the extension to your Chrome browser:
+
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Enable Developer mode by clicking the toggle switch at the top right.
+3. Click the "Load unpacked" button and select the `dist` folder from your local `link-shortener` directory.
 
 ### Usage
 
@@ -19,7 +26,7 @@ Click on the Link-Shortener icon in your Chrome toolbar. Paste your long URL int
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/link-shortener.git`
+1. Clone the repository: `git clone https://github.com/n0far/link-shortener.git`
 2. Navigate into the project directory: `cd link-shortener`
 3. Install the dependencies: `npm install`
 4. Start the server: `npm start`
